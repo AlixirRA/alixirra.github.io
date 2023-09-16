@@ -1,0 +1,29 @@
+{
+  "name": "anify-auth-recode",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun run dist/index.js",
+    "dev": "bun run src/index.ts",
+    "build": "bun build ./src/index.ts --outdir ./dist --target node",
+    "prettier": "prettier --write .",
+    "eslint": "eslint --ext .ts src/** --fix",
+    "lint": "bun run prettier && bun run eslint"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.3",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "bun-types": "latest",
+    "eslint": "^8.49.0",
+    "prettier": "^3.0.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "ioredis": "^5.3.2"
+  }
+}
